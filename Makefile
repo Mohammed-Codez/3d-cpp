@@ -7,8 +7,9 @@ incloc := /opt/homebrew/include/
 
 inclibs := raylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
 
-filenames := *.cpp
+filenames := src/*.cpp
 binname := bin/main
 
 all:
 	$(comp) $(filenames) -std=$(ver) -I$(incloc) -L$(libloc) -l$(inclibs) -o $(binname)
+	$(binname)
